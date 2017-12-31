@@ -1,0 +1,25 @@
+PROPERTY_REFERENCE,PRICE,BEDROOMS,BATHROOMS,HOUSE_NUMBER,ADDRESS,REGION,POSTCODE,PROPERTY_TYPE
+1,1000000,7,2,12,Richard Lane,London,W1F 3FT,Mansion
+2,100000,2,1,22,Brick Road,Sheffield,SH1 1AW,Terraced
+3,225000,5,,40,Yellow Lane,Manchester,MA12 3ZY,Detached
+4,150000,1,1,3B,Red Admiral Court,Essex,RM2 6ET,Flat
+5,222250,3,1,36,Bear Road,Winchester,WI3 9TT,Detached
+6,750000,10,4,,Country House,Surrey,GU13 9DD,Mansion
+7,125000,2,2,44,New Road,London,W1F 4DQ,Mansion
+8,545444,4,1,55,Straight Road,Sheffield,SH1 8FG,Terraced
+9,574833,4,3,23,Curved Lane,Manchester,MA12 3AS,Detached
+10,999999,5,1,101,Catherine House,Essex,RM2 0TY,Flat
+11,550000,2,1,15,Compton Avenue ,Winchester,WI3 7KL,Detached
+12,7500000,11,4,,Brighton Road ,Surrey,GU13 4DD,Mansion
+13,2500000,7,2,1,Station Road,London,W1F 3UT,Mansion
+14,123000,1,1,22a,High Street,Sheffield,SH1 7AA,Terraced
+15,275000,3,1,78,The Approach ,Manchester,MA12 9DF,Detached
+16,150000,1,1,Flat 12b,Windsor Court,Essex,RM2 7YA,Flat
+17,250000,2,1,23,Soho Road ,Winchester,WI3 7YI,Detached
+18,755000,4,,7,Park Lane,Surrey,GU13 3AS,Mansion
+19,1010000,6,6,6,Value Road,London,W1F 3ER,Mansion
+20,155000,3,1,1,Church Road,Sheffield,SH1 8KK,Terraced
+21,245000,2,2,40,Salmons Lane ,Manchester,MA12 4IJ,Detached
+22,156000,3,1,9a,Red Admiral Court,Essex,RM2 6ET,Flat
+23,222550,2,2,90,Cedar Park,Winchester,WI3 2BO,Detached
+24,755000,5,5,122,Jeff Street,Surrey,GU13 9OB,Mansion
