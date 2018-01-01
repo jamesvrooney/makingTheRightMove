@@ -4,17 +4,19 @@ package com.rooney.james;
  * Created by jamesvrooney on 31/12/2017.
  */
 public class PropertyRecord {
-    long propertyReference;
-    Integer price;
-    int numBedrooms;
-    int numBathrooms;
-    String houseNumber;
-    String address;
-    String region;
-    Postcode postcode;
-    PropertyType propertyType;
+    private long propertyReference;
+    private Integer price;
+    private int numBedrooms;
+    private int numBathrooms;
+    private String houseNumber;
+    private String address;
+    private String region;
+    private Postcode postcode;
+    private PropertyType propertyType;
 
-    public PropertyRecord(long propertyReference, Integer price, int numBedrooms, int numBathrooms, String houseNumber, String address, String region, Postcode postcode, PropertyType propertyType) {
+    private PropertyRecord(final long propertyReference, final Integer price, final int numBedrooms, final int numBathrooms,
+                           final String houseNumber, final String address, final String region, final Postcode postcode,
+                           final PropertyType propertyType) {
         this.propertyReference = propertyReference;
         this.price = price;
         this.numBedrooms = numBedrooms;
@@ -96,5 +98,78 @@ public class PropertyRecord {
 
     public void setPropertyType(PropertyType propertyType) {
         this.propertyType = propertyType;
+    }
+
+    public static class PropertyRecordBuilder {
+        private long propertyReference;
+        private int price;
+        private int numBedrooms;
+        private int numBathrooms;
+        private String houseNumber;
+        private String address;
+        private String region;
+        private Postcode postcode;
+        private PropertyType propertyType;
+
+        public PropertyRecordBuilder withPropertyReference(long propertyReference) {
+            this.propertyReference = propertyReference;
+
+            return this;
+        }
+
+        public PropertyRecordBuilder withPrice(Integer price) {
+            this.price = price;
+
+            return this;
+        }
+
+        public PropertyRecordBuilder withNumBedrooms(int numBedrooms) {
+            this.numBedrooms = numBedrooms;
+
+            return this;
+        }
+
+        public PropertyRecordBuilder withNumBathrooms(int numBathrooms) {
+            this.numBathrooms = numBathrooms;
+
+            return this;
+        }
+
+        public PropertyRecordBuilder withHouseNumber(String houseNumber) {
+            this.houseNumber = houseNumber;
+
+            return this;
+        }
+
+        public PropertyRecordBuilder withAddress(String address) {
+            this.address = address;
+
+            return this;
+        }
+
+        public PropertyRecordBuilder withRegion(String region) {
+            this.region = region;
+
+            return this;
+        }
+
+        public PropertyRecordBuilder withPostcode(Postcode postcode) {
+            this.postcode = postcode;
+
+            return this;
+        }
+
+        public PropertyRecordBuilder withPropertyType(PropertyType propertyType) {
+            this.propertyType = propertyType;
+
+            return this;
+        }
+
+        public PropertyRecord build()
+        {
+            return new PropertyRecord(propertyReference, price, numBedrooms,
+                    numBathrooms, houseNumber, address,
+                    region, postcode, propertyType);
+        }
     }
 }

@@ -63,7 +63,17 @@ public class PropertyFileParser {
             postcode = new Postcode(propertyData[7]);
             propertyType = PropertyType.valueOf(propertyData[8].toUpperCase());
 
-            propertyRecord = new PropertyRecord(propertyReference, price, numBedrooms, numBathrooms, houseNumber, address, region, postcode, propertyType);
+            propertyRecord = new PropertyRecord.PropertyRecordBuilder()
+                    .withPropertyReference(propertyReference)
+                    .withPrice(price)
+                    .withNumBedrooms(numBedrooms)
+                    .withNumBathrooms(numBathrooms)
+                    .withHouseNumber(houseNumber)
+                    .withAddress(address)
+                    .withRegion(region)
+                    .withPostcode(postcode)
+                    .withPropertyType(propertyType)
+                    .build();
 
         } catch (Exception e) {
             System.out.println("There is an error - James " + e.getMessage());
