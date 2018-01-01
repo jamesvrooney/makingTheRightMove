@@ -1,9 +1,9 @@
 package com.rooney.james;
 
+import org.javatuples.Pair;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -54,7 +54,7 @@ public class PropertyRecordServiceTest {
     @Test
     public void getDifferenceInAveragePricesBetweenTypes() throws Exception {
         // Given
-        List<PropertyType> propertyTypes = Arrays.asList(PropertyType.DETACHED, PropertyType.FLAT);
+        Pair<PropertyType, PropertyType> propertyTypes = new Pair<>(PropertyType.DETACHED, PropertyType.FLAT);
 
         long actualDifference = propertyRecordService.getDifferenceInAveragePricesBetweenTypes(propertyRecords, propertyTypes);
 

@@ -1,5 +1,7 @@
 package com.rooney.james;
 
+import org.javatuples.Pair;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -37,12 +39,12 @@ public class PropertyRecordServiceImpl implements PropertyRecordService {
     }
 
     @Override
-    public long getDifferenceInAveragePricesBetweenTypes(List<PropertyRecord> propertyRecords, List<PropertyType> propertyTypes) {
+    public long getDifferenceInAveragePricesBetweenTypes(List<PropertyRecord> propertyRecords, Pair<PropertyType, PropertyType> propertyTypes) {
         Map<PropertyType, Double> averagePricePerType = propertyRecords.stream()
                 .filter(propertyRecord -> propertyTypes.contains(propertyRecord.getPropertyType()))
                 .collect(Collectors.groupingBy(PropertyRecord::getPropertyType, Collectors.averagingInt(PropertyRecord::getPrice)));
 
-        Double difference = averagePricePerType.get(propertyTypes.get(0)) - averagePricePerType.get(propertyTypes.get(1));
+        Double difference = averagePricePerType.get(propertyTypes.getValue0()) - averagePricePerType.get(propertyTypes.getValue1());
 
         return Math.round(Math.abs(difference));
     }

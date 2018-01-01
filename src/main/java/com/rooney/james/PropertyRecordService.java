@@ -1,5 +1,7 @@
 package com.rooney.james;
 
+import org.javatuples.Pair;
+
 import java.util.List;
 
 /**
@@ -10,5 +12,5 @@ public interface PropertyRecordService {
 
     List<PropertyRecord> getTopNPercentMostExpensiveProperties(List<PropertyRecord> propertyRecords, Double percent);
 
-    long getDifferenceInAveragePricesBetweenTypes(List<PropertyRecord> propertyRecords, List<PropertyType> propertyTypes);
+    long getDifferenceInAveragePricesBetweenTypes(List<PropertyRecord> propertyRecords, Pair<PropertyType, PropertyType> propertyTypes);
 }
